@@ -1,0 +1,19 @@
+<div class="space"></div>
+<h1>RoadMap</h1>
+<div class="roadMapContainer">
+    <div class="roadMapitem" *ngFor="let roadMap of roadMaps">
+        <div class="headerRoadMap" (click)="openRoadMap(roadMap)">
+            <div class="titles">
+                <h2 class="title">{{roadMap.title}}</h2>
+                <div class="nameTitle">{{roadMap.nameTitle}}</div>
+            </div>
+            <img src="assets/images/down.svg" alt="" [class.openned]="roadMap.visible">
+        </div>
+        <div class="contentFaq" [class.closed]="roadMap.visible">
+            <div class="itemRoadMapValue active " *ngFor="let roadItem of roadMap.content">
+                {{roadItem}}
+            </div>
+        </div>
+    </div>
+
+</div>

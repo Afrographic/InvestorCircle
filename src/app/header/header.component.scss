@@ -1,0 +1,9 @@
+.videoBg video {
+    width: 50vw;
+}
+
+@media (max-width: 1000px) {
+    .videoBg video {
+        width: 112vw !important;
+    }
+}
